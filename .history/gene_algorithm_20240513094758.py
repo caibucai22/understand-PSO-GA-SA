@@ -128,41 +128,41 @@ def fitness_func(ga_instance, solution, solution_idx):
     return fitness
 
 if __name__ == '__main__':
-    ga_instance = pygad.GA(num_generations=5000,
-                        num_parents_mating=5,
-                        fitness_func=fitness,
-                        sol_per_pop=10,
-                        num_genes=len(function_inputs),
-                        # on_start=on_start,
-                        # on_fitness=on_fitness,
-                        # on_parents=on_parents,
-                        # on_crossover=on_crossover,
-                        on_mutation=on_mutation,
-                        # on_generation=on_generation,
-                        # on_stop=on_stop,
-                        gene_type=int,
-                        gene_space=[0, 1]
-                        )
+ga_instance = pygad.GA(num_generations=5000,
+                       num_parents_mating=5,
+                       fitness_func=fitness,
+                       sol_per_pop=10,
+                       num_genes=len(function_inputs),
+                       # on_start=on_start,
+                       # on_fitness=on_fitness,
+                       # on_parents=on_parents,
+                       # on_crossover=on_crossover,
+                       on_mutation=on_mutation,
+                       # on_generation=on_generation,
+                       # on_stop=on_stop,
+                       gene_type=int,
+                       gene_space=[0, 1]
+                       )
 
-    # ga_instance.run()
-    # ga_instance.plot_fitness()
-    # print(ga_instance.best_solution())
+# ga_instance.run()
+# ga_instance.plot_fitness()
+# print(ga_instance.best_solution())
 
 
-    ga_instance2 = pygad.GA(num_generations=100,
-                        num_parents_mating=7,
-                        fitness_func=fitness_func,
-                        sol_per_pop=50,
-                        num_genes=len(function_inputs2),
-                        # on_start=on_start,
-                        # on_fitness=on_fitness,
-                        # on_parents=on_parents,
-                        # on_crossover=on_crossover,
-                        # on_generation=on_generation,
-                        # on_stop=on_stop,
-                        )
-    ga_instance2.run()
-    ga_instance2.plot_fitness()
-    print(ga_instance2.best_solution())
-    print(ga_instance2.best_solutions_fitness)
+ga_instance2 = pygad.GA(num_generations=100,
+                       num_parents_mating=7,
+                       fitness_func=fitness_func,
+                       sol_per_pop=50,
+                       num_genes=len(function_inputs2),
+                       # on_start=on_start,
+                       # on_fitness=on_fitness,
+                       # on_parents=on_parents,
+                       # on_crossover=on_crossover,
+                       # on_generation=on_generation,
+                       # on_stop=on_stop,
+                       )
+ga_instance2.run()
+ga_instance2.plot_fitness()
+print(ga_instance2.best_solution())
+print(ga_instance2.best_solutions_fitness)
 
